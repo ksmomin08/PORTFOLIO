@@ -28,6 +28,8 @@
                                 <select class="form-select @error('category') is-invalid @enderror" id="category" name="category" required>
                                     <option value="Frontend" {{ $techStack->category == 'Frontend' ? 'selected' : '' }}>Frontend</option>
                                     <option value="Backend" {{ $techStack->category == 'Backend' ? 'selected' : '' }}>Backend</option>
+                                    <option value="Database" {{ $techStack->category == 'Database' ? 'selected' : '' }}>Database</option>
+                                    <option value="Version Control" {{ $techStack->category == 'Version Control' ? 'selected' : '' }}>Version Control</option>
                                     <option value="App" {{ $techStack->category == 'App' ? 'selected' : '' }}>Mobile App / Desktop</option>
                                 </select>
                                 @error('category')

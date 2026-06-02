@@ -24,7 +24,7 @@ class AdminTechStackController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'category' => 'required|in:Frontend,Backend,App',
+            'category' => 'required|in:Frontend,Backend,Database,Version Control,App',
             'icon' => 'nullable|string|max:255',
             'icon_file' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'status' => 'boolean',
@@ -53,7 +53,7 @@ class AdminTechStackController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'category' => 'required|in:Frontend,Backend,App',
+            'category' => 'required|in:Frontend,Backend,Database,Version Control,App',
             'icon' => 'nullable|string|max:255',
             'icon_file' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:10240',
             'status' => 'boolean',

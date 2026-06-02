@@ -28,6 +28,8 @@
                                     <option value="" disabled selected>Select Category</option>
                                     <option value="Frontend">Frontend</option>
                                     <option value="Backend">Backend</option>
+                                    <option value="Database">Database</option>
+                                    <option value="Version Control">Version Control</option>
                                     <option value="App">Mobile App / Desktop</option>
                                 </select>
                                 @error('category')
