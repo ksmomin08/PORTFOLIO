@@ -99,7 +99,7 @@
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1 small text-white">HQ Location Address</h6>
-                                <p class="text-muted small mb-0" style="line-height: 1.6;">{{ $settings['address'] }}</p>
+                                <p class="text-muted small mb-0" style="line-height: 1.6;">{{ $settings['address'] ?? 'Surat, Gujarat, India' }}</p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1 small text-white">Phone Lines</h6>
-                                <p class="text-muted small mb-0">{{ $settings['phone_1'] }}<br>{{ $settings['phone_2'] }}</p>
+                                <p class="text-muted small mb-0">{{ $settings['phone_1'] ?? '+91 98765 43210' }}<br>{{ $settings['phone_2'] ?? '' }}</p>
                             </div>
                         </div>
                     </div>
@@ -123,14 +123,14 @@
                             </div>
                             <div>
                                 <h6 class="fw-bold mb-1 small text-white">Email Support</h6>
-                                <a href="mailto:{{ $settings['email'] }}" class="text-muted small text-decoration-none d-block text-truncate" style="max-width: 140px;">{{ $settings['email'] }}</a>
+                                <a href="mailto:{{ $settings['email'] ?? 'info@narjis.com' }}" class="text-muted small text-decoration-none d-block text-truncate" style="max-width: 140px;">{{ $settings['email'] ?? 'info@narjis.com' }}</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Google Map Iframe Integration -->
-                @if(isset($settings['map_link']))
+                @if(!empty($settings['map_link']))
                     <div class="bento-card overflow-hidden shadow-sm p-0" style="height: 260px;">
                         <!-- Custom styled dark embed map visual overlay -->
                         <iframe src="{{ $settings['map_link'] }}" width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

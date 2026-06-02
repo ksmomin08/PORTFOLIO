@@ -26,4 +26,4 @@ RUN composer install --no-interaction --no-dev --optimize-autoloader
 EXPOSE 10000
 
 # Automatically generate APP_KEY, run database migrations safely, and boot the application
-CMD php artisan key:generate --force && (php artisan migrate --force || true) && php artisan serve --host=0.0.0.0 --port=10000
+CMD php artisan key:generate --force && (php artisan migrate --force --seed || true) && php artisan serve --host=0.0.0.0 --port=10000

@@ -547,19 +547,19 @@
                         @if(\App\Models\Setting::get('footer_show_address', true))
                         <li class="mb-3 d-flex align-items-start">
                             <i class="fa-solid fa-location-dot text-primary me-3 mt-1" style="color: var(--secondary-color) !important;"></i>
-                            <span>{{ \App\Models\Setting::get('address') }}</span>
+                            <span>{{ \App\Models\Setting::get('address', 'Surat, Gujarat, India') }}</span>
                         </li>
                         @endif
                         @if(\App\Models\Setting::get('footer_show_phone', true))
                         <li class="mb-3 d-flex align-items-center">
                             <i class="fa-solid fa-phone text-success me-3"></i>
-                            <span>{{ \App\Models\Setting::get('phone_1') }}</span>
+                            <span>{{ \App\Models\Setting::get('phone_1', '+91 98765 43210') }}</span>
                         </li>
                         @endif
                         @if(\App\Models\Setting::get('footer_show_email', true))
                         <li class="mb-3 d-flex align-items-center">
                             <i class="fa-solid fa-envelope text-info me-3"></i>
-                            <span>{{ \App\Models\Setting::get('email') }}</span>
+                            <span>{{ \App\Models\Setting::get('email', 'info@narjis.com') }}</span>
                         </li>
                         @endif
                     </ul>

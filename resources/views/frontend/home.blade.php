@@ -468,7 +468,7 @@
                     </div>
                     <div>
                         <h6 class="fw-bold mb-0 small text-white">Voice Call Support</h6>
-                        <span class="text-muted small">{{ $settings['phone_1'] }}</span>
+                        <span class="text-muted small">{{ $settings['phone_1'] ?? '' }}</span>
                     </div>
                 </div>
 
@@ -478,7 +478,7 @@
                     </div>
                     <div>
                         <h6 class="fw-bold mb-0 small text-white">Official Inbox Address</h6>
-                        <span class="text-muted small">{{ $settings['email'] }}</span>
+                        <span class="text-muted small">{{ $settings['email'] ?? '' }}</span>
                     </div>
                 </div>
             </div>
