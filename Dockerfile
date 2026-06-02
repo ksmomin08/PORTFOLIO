@@ -13,6 +13,10 @@ RUN apt-get update && apt-get install -y \
 # Install PHP extensions including pdo_mysql for Railway/MySQL database connection
 RUN docker-php-ext-install zip pdo pdo_mysql
 
+# Configure custom upload and post sizes for PHP
+RUN echo "upload_max_filesize = 64M" > /usr/local/etc/php/conf.d/uploads.ini \
+    && echo "post_max_size = 64M" >> /usr/local/etc/php/conf.d/uploads.ini
+
 COPY . .
 
 # Copy environment template to .env to allow key generation and configuration
